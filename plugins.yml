@@ -95,7 +95,7 @@ fontawesome:
   name: '@fortawesome/fontawesome-free'
   file: css/all.min.css
   other_name: font-awesome
-  version: 7.1.0
+  version: 7.2.0
 gitalk:
   name: gitalk
   file: dist/gitalk.min.js
