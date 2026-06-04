@@ -1,6 +1,9 @@
 - let defaultComment = theme.comments.use[0]
 hr.custom-hr
 #post-comment
+  if theme.comments.custom_content
+    .comment-custom-content!= theme.comments.custom_content
+
   .comment-head
     .comment-headline
       i.fas.fa-comments.fa-fw
