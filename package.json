@@ -1,7 +1,7 @@
 {
-  "name": "hexo-theme-butterfly",
-  "version": "5.5.5-b1",
-  "description": "A Simple and Card UI Design theme for Hexo",
+  "name": "hexo-theme-butterfly-newbee",
+  "version": "5.5.6",
+  "description": "A Simple and Card UI Design theme for Hexo, but improved.",
   "main": "package.json",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,16 +11,16 @@
     "theme",
     "butterfly",
     "Card UI Design",
-    "Jerry",
+    "SamHou",
     "hexo-theme-butterfly"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/jerryc127/hexo-theme-butterfly.git"
+    "url": "https://github.com/SamHou0/hexo-theme-butterfly-newbee"
   },
   "bugs": {
-    "url": "https://github.com/jerryc127/hexo-theme-butterfly/issues",
-    "email": "my@crazywong.com"
+    "url": "https://github.com/SamHou0/hexo-theme-butterfly-newbee/issues",
+    "email": "sam@samhou.top"
   },
   "dependencies": {
     "hexo-renderer-pug": "^3.0.0",
@@ -28,7 +28,7 @@
     "hexo-util": "^4.0.0",
     "moment-timezone": "^0.6.0"
   },
-  "homepage": "https://butterfly.js.org/",
-  "author": "Jerry <my@crazywong.com>",
+  "homepage": "https://blog.samhou.moe/",
+  "author": "Sam Hou <sam@samhou.top>",
   "license": "Apache-2.0"
 }
