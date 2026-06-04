@@ -52,6 +52,7 @@ pagination:
   page_info: '第 ${current} 页 / 共 ${total} 页'
 
 comment: 评论
+hatsu_no_comments: 暂无 Fediverse 评论
 
 aside:
   articles: 文章

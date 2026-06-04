@@ -51,6 +51,7 @@ pagination:
   page_info: 'Page ${current} of ${total}'
 
 comment: Comments
+hatsu_no_comments: No Fediverse comments yet
 
 aside:
   articles: Articles

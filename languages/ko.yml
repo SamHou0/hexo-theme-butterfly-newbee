@@ -51,6 +51,7 @@ pagination:
   page_info: '${current} 페이지 / 총 ${total} 페이지'
 
 comment: 댓글
+hatsu_no_comments: 아직 Fediverse 댓글이 없습니다
 
 aside:
   articles: 글

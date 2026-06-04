@@ -22,7 +22,7 @@ script.
       el.innerHTML = ''
       const commentsEl = document.createElement('oom-comments')
       commentsEl.setAttribute('src', pageKey)
-      commentsEl.textContent = 'No comments yet'
+      commentsEl.textContent = '!{_p("hatsu_no_comments")}'
       el.appendChild(commentsEl)
     }
 
@@ -44,16 +44,14 @@ script.
       return
     }
 
+    // First load - always init immediately for Hatsu (non-lazyload)
+    setTimeout(initHatsu, 100)
+
+    // Lazyload - use IntersectionObserver
+    if ({lazyload}) {
+      btf.loadComment(document.getElementById('hatsu-wrap'), loadHatsu)
+    }
+
     btf.addGlobalFn('pjaxSendOnce', destroyHatsu, 'destroyHatsu')
     btf.addGlobalFn('pjaxCompleteOnce', initHatsu, 'initHatsu')
-
-    if ('!{use[0]}' === 'Hatsu' || !!{lazyload}) {
-      if (!{lazyload}) {
-        setTimeout(initHatsu, 100)
-      } else {
-        btf.loadComment(document.getElementById('hatsu-wrap'), loadHatsu)
-      }
-    } else {
-      window.loadOtherComment = (el) => loadHatsu(el, getHatsuSrc(location.href))
-    }
   })()
