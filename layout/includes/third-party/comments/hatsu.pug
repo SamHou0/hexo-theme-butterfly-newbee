@@ -1,0 +1,59 @@
+- const { instance } = theme.hatsu
+- const { use, lazyload } = theme.comments
+
+script.
+  (() => {
+    const instance = '!{instance}'
+    const isShuoshuo = GLOBAL_CONFIG_SITE.pageType === 'shuoshuo'
+
+    const getHatsuSrc = (url) => {
+      const { origin, pathname } = new URL(url)
+      const cleanUrl = new URL(pathname, origin).href
+      const id = btoa(cleanUrl).replaceAll('+', '-').replaceAll('/', '_')
+      return new URL(`/notice/${id}`, instance).href
+    }
+
+    const loadHatsu = async (el, pageKey) => {
+      if (!customElements.get('oom-comments')) {
+        const Comments = await import('https://esm.run/@oom/mastodon-comments')
+        customElements.define('oom-comments', Comments.default)
+      }
+      await btf.getCSS('https://cdn.jsdelivr.net/npm/@oom/mastodon-comments/src/styles.css')
+      el.innerHTML = ''
+      const commentsEl = document.createElement('oom-comments')
+      commentsEl.setAttribute('src', pageKey)
+      commentsEl.textContent = 'No comments yet'
+      el.appendChild(commentsEl)
+    }
+
+    const destroyHatsu = () => {
+      const el = document.getElementById('hatsu-wrap')
+      if (el) el.innerHTML = ''
+    }
+
+    const initHatsu = () => {
+      const el = document.getElementById('hatsu-wrap')
+      if (!el) return
+      loadHatsu(el, getHatsuSrc(location.href))
+    }
+
+    if (isShuoshuo) {
+      '!{use[0]}' === 'Hatsu'
+        ? window.shuoshuoComment = { loadComment: (el) => loadHatsu(el, getHatsuSrc(location.href)) }
+        : window.loadOtherComment = (el) => loadHatsu(el, getHatsuSrc(location.href))
+      return
+    }
+
+    btf.addGlobalFn('pjaxSendOnce', destroyHatsu, 'destroyHatsu')
+    btf.addGlobalFn('pjaxCompleteOnce', initHatsu, 'initHatsu')
+
+    if ('!{use[0]}' === 'Hatsu' || !!{lazyload}) {
+      if (!{lazyload}) {
+        setTimeout(initHatsu, 100)
+      } else {
+        btf.loadComment(document.getElementById('hatsu-wrap'), loadHatsu)
+      }
+    } else {
+      window.loadOtherComment = (el) => loadHatsu(el, getHatsuSrc(location.href))
+    }
+  })()
