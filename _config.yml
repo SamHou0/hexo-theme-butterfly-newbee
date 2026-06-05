@@ -656,6 +656,12 @@ artalk:
   visitor: false
   option:
 
+# Hatsu
+# https://hatsu.local/
+hatsu:
+  instance: https://hatsu.local
+# Enable hatsu fediverse feature.
+fediverse: false
 # --------------------------------------
 # Chat Services
 # --------------------------------------
