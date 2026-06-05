@@ -3,3 +3,7 @@ if theme.fediverse
     type="application/activity+json"
     href=new URL(`/posts/${urlNoIndex(null,config.pretty_urls.trailing_index,config.pretty_urls.trailing_html)}`,
     theme.hatsu.instance).href)
+    link(rel="alternate"
+    type="application/ld+json"
+    href=new URL(`/posts/${urlNoIndex(null,config.pretty_urls.trailing_index,config.pretty_urls.trailing_html)}`,
+    theme.hatsu.instance).href)
