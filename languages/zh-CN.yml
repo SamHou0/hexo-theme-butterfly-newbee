@@ -3,9 +3,9 @@ footer:
   theme: 主题
 
 copy:
-  success: 复制成功
-  error: 复制失败
-  noSupport: 浏览器不支持
+  success: 复制成功喵
+  error: 复制失败喵
+  noSupport: 浏览器不支持喵
 
 page:
   articles: 全部文章
@@ -13,56 +13,56 @@ page:
   category: 分类
   archives: 归档
 
-card_post_count: 条评论
+card_post_count: 条评论喵
 
-no_title: 无标题
+no_title: 标题走丢了喵
 
 post:
   created: 发表于
   updated: 更新于
-  wordcount: 总字数
-  min2read: 阅读时长
-  min2read_unit: 分钟
-  page_pv: 浏览量
-  comments: 评论数
+  wordcount: 惜字如金
+  min2read: 消耗生命
+  min2read_unit: ' 分钟'
+  page_pv: 暗中观察
+  comments: 收到的话
   copyright:
     author: 文章作者
     link: 文章链接
     copyright_notice: 版权声明
     copyright_content: '本博客所有文章除特别声明外，均采用
       <a href="%s" target="_blank">%s</a> 许可协议。转载请注明来源 <a href="%s" target="_blank">%s</a>！'
-  recommend: 相关推荐
+  recommend: 看看别的喵~
   edit: 编辑
-  back_to_home: 返回首页
+  back_to_home: 带我回去喵！
 
 search:
-  title: 搜索
-  load_data: 数据加载中
-  input_placeholder: 搜索文章
+  title: 找找喵
+  load_data: 加载中，别急喵
+  input_placeholder: 喵两句搜点什么
   algolia_search:
-    hits_empty: '未找到符合您查询的内容：${query}'
-    hits_stats: '找到 ${hits} 条结果，耗时 ${time} 毫秒'
+    hits_empty: '${query} 没找到喵……'
+    hits_stats: '找到了喵！共 ${hits} 条结果，耗时 ${time} 毫秒'
   local_search:
-    hits_empty: '未找到符合您查询的内容：${query}'
-    hits_stats: '共找到 ${hits} 篇文章'
+    hits_empty: '${query} 没找到喵……'
+    hits_stats: '找到了喵！共找到 ${hits} 篇文章'
 
 pagination:
-  prev: 上一篇
-  next: 下一篇
+  prev: 时间快进！（上一篇）
+  next: 时间回溯！（下一篇）
   page_info: '第 ${current} 页 / 共 ${total} 页'
 
-comment: 评论
-hatsu_no_comments: 暂无 Fediverse 评论
+comment: 无内鬼，来点评论
+hatsu_no_comments: 没有 Fediverse 评论……随便去喵两句好不好喵……
 
 aside:
   articles: 文章
   tags: 标签
   categories: 分类
-  card_announcement: 公告
+  card_announcement: 看这里喵！
   card_categories: 分类
   card_tags: 标签
   card_archives: 归档
-  card_recent_post: 最新文章
+  card_recent_post: 新东西喵！
   card_webinfo:
     headline: 网站信息
     article_name: 文章数目
@@ -72,8 +72,8 @@ aside:
     last_push_date:
       name: 最后更新时间
     site_wordcount: 本站总字数
-    site_uv_name: 本站访客数
-    site_pv_name: 本站总浏览量
+    site_uv_name: 观察者数量
+    site_pv_name: 暗中观察次数
   more_button: 查看更多
   card_newest_comments:
     headline: 最新评论
@@ -93,8 +93,8 @@ date_suffix:
   day: 天前
   month: 个月前
 
-donate: 赞助
-share: 分享
+donate: 给我打钱（赞助）
+share: 塞给别人
 
 rightside:
   readmode_title: 阅读模式
@@ -119,7 +119,7 @@ Snackbar:
   day_to_night: 已切换为深色模式
   night_to_day: 已切换为浅色模式
 
-loading: 加载中...
-load_more: 加载更多
+loading: 加载中喵……
+load_more: 再来点喵
 
-error404: 页面未找到
+error404: 没找到喵
