@@ -9,6 +9,8 @@ if theme.Open_Graph_meta.enable
     }, theme.Open_Graph_meta.option)
   -
   != open_graph(ogOption)
+  meta(property="og:logo" content=theme.favicon)
+  
 else
   - const description = page.description || page.content || page.title || config.description
   if description
